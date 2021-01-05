@@ -1,0 +1,83 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- faq
+- request_products
+- compare_price
+entities:
+- product
+- scene
+- order
+slots:
+  product:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+  scene:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: 嗨！你好啊！
+  - text: 哈喽，你好！
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: 你需要帮助吗?
+  utter_happy:
+  - text: 好开心!
+  utter_goodbye:
+  - text: Bye
+  - text: 再见！
+  utter_iamabot:
+  - text: 我是聊天机器人康康。
+  utter_faq/ask_chip:
+  - text: 我们的芯片产品有GSA和ASA。
+  utter_faq/ask_scene:
+  - text: 我们的场景服务有产品介绍、优势、报价。
+  utter_faq/ask_product:
+  - buttons:
+    - payload: 全基因
+      title: 全基因
+    - payload: ASA
+      title: ASA
+    - payload: 外显子
+      title: 外显子
+    - payload: GSA
+      title: GSA
+    text: '我们的产品套餐有:'
+  utter_ask_product:
+  - text: 你想问什么产品的{scene}？
+  utter_ask_scene:
+  - text: 你想问{product}什么场景？
+  utter_no_scene:
+  - text: 抱歉，没有这种场景。
+  utter_no_product:
+  - text: 抱歉，现在我们还没有这种产品。
+  utter_default:
+  - text: 对不起，我没听懂您的意思，可以换个说法吗？
+actions:
+- action_utter_productScene
+- action_compare_attr
+- action_utter_what
+forms:
+  products_form:
+    product:
+    - entity: product
+      type: from_entity
+    scene:
+    - entity: scene
+      type: from_entity
