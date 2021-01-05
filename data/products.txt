@@ -1,0 +1,8 @@
+- lookup: product
+  examples: |
+    - ASA
+    - 全基因
+    - WGS
+    - GSA
+    - 健康体检
+    - 肿瘤套餐

@@ -1,0 +1,210 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - 早上好
+    - 晚上好
+    - 下午好
+    - 你好
+    - 嗨
+    - 哈喽
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - bye
+    - goodbye
+    - bye bye
+    - 再见
+    - 拜拜
+    - 拜
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - 是的
+    - 是
+    - 对的
+    - 对
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - 不
+    - 不要
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - 太好了
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - 你是机器人吗?
+
+- intent: faq/ask_chip
+  examples: |
+    - 你们有什么芯片产品?
+    - 芯片有什么?
+- intent: faq/ask_product
+  examples: |
+    - 都有哪些产品
+    - 介绍下[产品类型]
+    - 你们有什么产品？
+    - 产品列表有哪些？
+    - 有哪些产品？
+    - 有什么套餐？
+    - 产品
+    - 都有哪些类型的产品
+    - 咨询下你们的产品p
+    - 都有什么产品
+- intent: faq/ask_scene
+  examples: |
+    - 你们公司的产品有哪几块内容？
+    - 有什么场景？
+    - 有什么服务？
+- intent: request_products
+  examples: |
+    - 我想问[ASA](product)的[优势](scene)。
+    - [ASA](product)
+    - [asa]{"entity": "product", "value": "ASA"}
+    - [介绍](scene)
+    - [全基因](product)
+    - [基因组](product)
+    - [优势](scene)
+    - [Asian Screening Array](product)
+    - [ASA](product)的[优势](scene)
+    - 那它的[报价](scene)是多少
+    - 那它的[报价](scene)是多少
+    - 那它的[价格]{"entity": "scene", "value": "报价"}是多少
+    - [价格](scene)
+    - [健康体检](product)
+    - [肿瘤套餐](product)
+    - [WES](product)
+    - [wes](product)
+    - [全外](product)
+    - [外显子](product)
+    - [全外显子](product)
+    - [gsa](product)
+    - [GSA](product)
+- intent: ask_what
+  examples: |
+    - 它是什么
+    - [asa](product)是什么
+    - [asa](product)的意思
+    - [wgs](product)是什么？
+    - [外显子](product)是什么？
+    - 什么是[asa](product)
+    - 它的意思
+    - 它的说明
+    - 可以给我[介绍](scene)一下[asa](product)吗
+    - [全基因](product)是什么
+    - [全基因](product)的介绍(scene)
+    - [全基因](product)的意思
+- intent: compare_price
+  examples: |
+    - [最贵](order)的产品？
+    - 价格[最高](order)的产品
+    - [最贵](order)的[介绍](scene)
+    - 价格[最高](order)
+    - [最便宜](order)的
+    - [第二贵](order)的
+    - [第二](order)贵的
+    - [第一](order)贵的
+    - [第1](order)贵的
+    - [第2](order)贵的
+    - [第二便宜](order)的
+    - [最低](order)的
+- synonym: ASA
+  examples: |
+    - asa
+    - ASA芯片
+    - 基于ASA芯片技术的精准健康评估套餐（ASA）
+    - Asian Screening Array
+- synonym: 报价
+  examples: |
+    - 价格
+
+- synonym: '1'
+  examples: |
+    - 第一
+    - 最贵
+    - 最高
+    - 第1
+- synonym: '2'
+  examples: |
+    - 第二
+    - 第二贵
+    - 第2
+- synonym: '0'
+  examples: |
+    - 最便宜
+    - 最低
+- synonym: 全基因
+  examples: |
+    - 全基因组
+    - 基因组
+    - 基因
+    - 基于全基因组的个人全基因组健康评估套餐
+    - 个人全基因组健康评估套餐
+    - 全基因组健康评估
+    - WGS
+    - 个人全基因
+    - 全基因组套餐
+- synonym: 产品
+  examples: |
+    - 产品类型
+    - 产品类别
+    - 产品条目
+    - 产品服务
+    - 产品目录
+    - 套餐
+    - 检测类型
+    - 检测方法
+    - 检测产品
+    - 检测类别
+    - 检测列表
+- synonym: WES
+  examples: |
+    - wes
+    - 全外
+    - 全外显子
+    - 外显子
+- synonym: GSA
+  examples: |
+    - gsa
+
